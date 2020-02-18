@@ -1,13 +1,19 @@
 <h1>Edit the <%= @task.title %> Task</h1>
->
-
+<p>
 <%= form_for(@task) do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
-
+</p>
+<p>
   <%= f.label :details %>
   <%= f.text_field :details %>
-
+</p>
+<p>
   <%= f.submit %>
+</p>
 <% end %>
-<a href="/tasks">Back to the list</a>
+
+<%= link_to tasks_path do %>
+  <i class="fas fa-backward"></i>
+  <% end %>
+
